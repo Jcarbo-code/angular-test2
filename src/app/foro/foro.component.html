@@ -1,0 +1,16 @@
+<div>
+  <img [src]="encabezado.titulo" class="card-img-top" alt="...">
+</div>
+<div *ngFor="let comentario of comentarios" >
+  <div *ngIf="comentario.aceptada == true">
+  <div class="card text-center">
+    <div class="card-body bg-dark">
+      <h5 class="card-title text-white">{{comentario.titulo}}</h5>
+      <p class="card-text text-white">{{comentario.descripcion}}</p>
+      <p></p>
+      <app-input-votar [comentario]="comentario"></app-input-votar>
+      <p class="card-text text-white">Cantidad de votos {{comentario.votos}}</p>
+    </div>
+  </div>
+</div>
+</div>

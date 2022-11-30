@@ -1,0 +1,24 @@
+<div>
+    <img [src]="encabezado.titulo" class="card-img-top" alt="...">
+    <div class="row">
+        <div class="col-sm-6" *ngFor="let noticia of noticias">
+            <div class="card bg-primary">
+            <div class="card-body bg-dark">
+                <img [src]="noticia.imagen" class="card-img-top" alt="...">
+                <h5 class="card-title text-white">{{noticia.titulo}}</h5>
+                <p class="card-text text-white">{{noticia.descripcion}}</p>
+                <p class="card-text text-white"><small class="text-muted">{{noticia.fecha}}</small></p>
+                <button type="button" class="btn btn-primary" (click)="vistas(noticia)"  (click)="mostrarNoticia(noticia)">Ver noticia completa</button>
+                <p class="card-text text-white"><small class="text-muted">👁️ {{noticia.visitas}}</small></p>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+
+
+
+

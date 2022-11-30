@@ -1,0 +1,15 @@
+<img [src]="encabezado.titulo" class="card-img-top" alt="...">
+
+        <div class="card mb-3" *ngFor= "let noticias of noticiaCompleta$ | async">
+            <img [src]="noticias.imagen" class="card-img-top" alt="...">
+            <div class="card-body bg-dark">
+              <h3 class="card-title text-danger">{{noticias.titulo}}</h3>
+              <h5 class="card-text text-primary">{{noticias.descripcion}}</h5>
+              <p class="card-text text-white">{{noticias.contenido}}</p>
+              <p class="card-text text-warning">Si quieres agregar una opinion a nuestro foro sobre esta noticia podes hacerlo aqui:</p>
+              <a [routerLink]="['/comentario']" type="button" class="btn btn-outline-primary"> 🗨 Opinar</a>
+            </div>
+         </div>
+         
+    
+
